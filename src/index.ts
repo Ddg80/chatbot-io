@@ -1,5 +1,5 @@
 import './index.scss';
-import Navbar from './navbar/index';
+import Navbar from './main/index';
 
 function run() {
   const navbar = new Navbar();

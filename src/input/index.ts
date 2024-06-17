@@ -1,6 +1,6 @@
-import './index.scss';
+import MessageSended from '../messageSended';
 
-class Template {
+class Input {
   el: HTMLElement | null;
 
   constructor() {
@@ -9,9 +9,6 @@ class Template {
 
   render() {
     return `
-      <div class="messages" id="messages">
-          <!-- Messages will be displayed here -->
-      </div>
       <div class="message-container">
           <input type="text" id="messageInput" class="message-input" placeholder="Envoyer un message">
           <button class="send-button" id="sendButton">Envoyer</button>
@@ -26,31 +23,28 @@ class Template {
 
     messageInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
-        this.sendMessage();
+        this.sendMessage((new MessageSended({
+          name: 'John2',
+          time: '00:08',
+          text: messageInput.value
+        })).render());
       }
     });
 
     sendButton.addEventListener('click', () => {
-      this.sendMessage();
+      this.sendMessage((new MessageSended({
+        name: 'John2',
+        time: '00:08',
+        text: messageInput.value
+      })).render());
     });
   }
 
-  sendMessage() {
-    const messageInput = document.getElementById('messageInput') as HTMLInputElement;
-    const messageText = messageInput.value.trim();
-
-    if (messageText !== '') {
-      const messageElement = document.createElement('div');
-      messageElement.classList.add('message');
-      messageElement.textContent = messageText;
-
-      document.getElementById('messages')!.appendChild(messageElement);
-
-      messageInput.value = '';
-      messageInput.focus();
-    }
+  sendMessage(messageInput: string) {
+    document.getElementById('messages')!.insertAdjacentHTML('beforeend', messageInput.trim());
+    const input: HTMLInputElement = document.getElementById('messageInput') as HTMLInputElement;
+    input.value = '';
   }
 }
 
-const template = new Template();
-template.run();
+export default Input;

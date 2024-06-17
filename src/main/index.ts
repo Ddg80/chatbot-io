@@ -1,12 +1,16 @@
 import ContactRow from '../contact/index';
 import MessageReceived from '../messageReceived';
 import MessageSended from '../messageSended';
+import Input from '../input';
 
 const Navbar = class {
   el: HTMLBodyElement | null;
 
+  input: Input;
+
   constructor() {
     this.el = document.querySelector('body');
+    this.input = new Input();
   }
 
   render() {
@@ -29,7 +33,7 @@ const Navbar = class {
             </div>
           </nav>
           <div class="d-flex flex-row">
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 95vh;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 85vh;">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <svg class="bi me-2" width="40"><use xlink:href="#bootstrap"/></svg>
                 <span class="fs-4">ChatBot</span>
@@ -83,8 +87,8 @@ const Navbar = class {
               </div>
             </div>
           <div class="m-4 col-8">
-               <div class="container">
-    <div class="chat-box">
+         <div class="container h-100">
+    <div class="chat-box messages h-100" id="messages">
              ${
   (new MessageReceived({
     name: 'John3',
@@ -99,7 +103,9 @@ const Navbar = class {
     text: 'Hello you!'
   })).render()
 }
+
 </div>
+${this.input.render()}
 </div>
           </div>
         </div>
@@ -108,6 +114,7 @@ const Navbar = class {
 
   run() {
     this.el!.innerHTML = this.render();
+    this.input.run();
   }
 };
 

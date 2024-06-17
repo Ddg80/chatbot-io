@@ -2,7 +2,7 @@
 
 ## Image
 
-[Projet](./image.png)
+![Projet](./image.png)
 
 ## Group
 

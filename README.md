@@ -1,5 +1,7 @@
 # Hello World
 
+Après avoir développé les fonctionnalités chacun de notre côté et fais les PR, on a travaillé ensemble le rassemblement des composants.
+
 ## Image
 
 ![Projet](./image.png)

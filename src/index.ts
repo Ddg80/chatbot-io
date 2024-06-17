@@ -1,3 +1,14 @@
+import './index.scss';
+import Navbar from './navbar/index';
+
+function run() {
+  const navbar = new Navbar();
+  navbar.run();
+  navbar.render();
+}
+
+run();
+
 document.addEventListener('DOMContentLoaded', () => {
   const messageForm = document.getElementById('message-form') as HTMLFormElement;
   const messageInput = document.getElementById('message-input') as HTMLInputElement;

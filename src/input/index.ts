@@ -1,4 +1,5 @@
 import MessageSended from '../messageSended';
+import MessageReceived from '../messageReceived';
 
 class Input {
   el: HTMLElement | null;
@@ -28,6 +29,11 @@ class Input {
           time: '00:08',
           text: messageInput.value
         })).render());
+        this.sendMessage((new MessageReceived({
+          name: 'John2',
+          time: '00:08',
+          text: 'Hello, que puis-je pour vous ?'
+        })).render());
       }
     });
 
@@ -36,6 +42,11 @@ class Input {
         name: 'John2',
         time: '00:08',
         text: messageInput.value
+      })).render());
+      this.sendMessage((new MessageReceived({
+        name: 'John2',
+        time: '00:08',
+        text: 'Hello, que puis-je pour vous'
       })).render());
     });
   }

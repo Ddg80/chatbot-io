@@ -32,3 +32,12 @@ Analyse the coding rules with :
 ```bash
 npm run lint
 ```
+
+## Commande remote
+
+```sh
+ git remote -v
+ git remote rename origin work
+ git remote rename upstream origin
+ git pull origin main
+```

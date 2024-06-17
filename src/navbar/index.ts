@@ -1,3 +1,5 @@
+import ContactRow from '../contact/index';
+
 const Navbar = class {
   el: HTMLBodyElement | null;
 
@@ -12,7 +14,9 @@ const Navbar = class {
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="#Navbar"> 
+<img src="https://img.icons8.com/?size=100&id=uZrQP6cYos2I&format=png&color=000000" alt="Navbar">
+</a>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
@@ -30,34 +34,34 @@ const Navbar = class {
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">
-                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-                  Contact 1
-                </a>
+                  ${
+  (new ContactRow({
+    firstName: 'John',
+    lastName: 'Doe',
+    pictureUrl: 'https://imgs.search.brave.com/fe0OixSVwxjPX4PUoMR-GnmUH244fPKYM6Y_oS3faTw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni84MzIzLzgzMjMz/MTcucG5nP3NlbXQ9/YWlzX2h5YnJpZA',
+    sentence: 'This is a sentence2'
+  })).render()
+}
               </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                  Contact 2
-                </a>
+              <li class="nav-item">
+                  ${
+  (new ContactRow({
+    firstName: 'John2',
+    lastName: 'Doe2',
+    pictureUrl: 'https://imgs.search.brave.com/fe0OixSVwxjPX4PUoMR-GnmUH244fPKYM6Y_oS3faTw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni84MzIzLzgzMjMz/MTcucG5nP3NlbXQ9/YWlzX2h5YnJpZA',
+    sentence: 'This is a sentence2'
+  })).render()
+}
               </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                  Contact 3
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                  Contact 4
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                  Contact 5
-                </a>
+              <li class="nav-item">
+                  ${
+  (new ContactRow({
+    firstName: 'John3',
+    lastName: 'Doe3',
+    pictureUrl: 'https://imgs.search.brave.com/fe0OixSVwxjPX4PUoMR-GnmUH244fPKYM6Y_oS3faTw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni84MzIzLzgzMjMz/MTcucG5nP3NlbXQ9/YWlzX2h5YnJpZA',
+    sentence: 'This is a sentence2'
+  })).render()
+}
               </li>
             </ul>
             <hr>

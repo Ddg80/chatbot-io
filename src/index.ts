@@ -1,5 +1,10 @@
 import './index.scss';
 import Navbar from './navbar/index';
 
-const navbar = new Navbar();
-navbar.run();
+function run() {
+  const navbar = new Navbar();
+  navbar.run();
+  navbar.render();
+}
+
+run();

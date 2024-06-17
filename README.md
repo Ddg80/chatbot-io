@@ -1,5 +1,18 @@
 # Hello World
 
+## Image
+
+[Projet](./image.png)
+
+## Group
+
+- DAVID
+- NOE 
+- LUCAS
+- FLORIAN
+- THEO 
+
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install helloworld.

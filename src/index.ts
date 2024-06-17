@@ -1,5 +1,6 @@
 import './index.scss';
+import Navbar from './navbar/index';
 
-const hello = 'Bonjour tout le monde';
 
-console.log(hello);
+const navbar = new Navbar();
+navbar.run();
